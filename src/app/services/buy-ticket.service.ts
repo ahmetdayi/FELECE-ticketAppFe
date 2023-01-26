@@ -15,4 +15,9 @@ export class BuyTicketService {
   takeTicket(buyTicketRequest:Buy_Ticket_Request){
     return this.httpClient.post<Buy_Ticket>(this.getApiUrl,buyTicketRequest);
   }
+
+  updateStatue(ticketId:number,statue:string){
+    return this.httpClient.put("http://localhost:8080/buy_ticket/update_statue?id=" +
+      ticketId+"&statue="+statue, {})
+  }
 }

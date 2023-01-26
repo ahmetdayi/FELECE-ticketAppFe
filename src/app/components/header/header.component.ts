@@ -9,14 +9,19 @@ import {Router} from "@angular/router";
 export class HeaderComponent implements OnInit {
 
   // @ts-ignore
-  login:string;
+  clientId:number;
+
+
   ngOnInit(): void {
+
   }
   constructor(private route:Router) {
   }
 
   isLogin() {
     if (localStorage.getItem("token")) {
+      // @ts-ignore
+      this.clientId= +localStorage.getItem("clientId")
       return true
     } else {
       return false
@@ -26,6 +31,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     localStorage.removeItem("token");
+    localStorage.removeItem("clientId")
 
     this.route.navigate(["/"])
   }

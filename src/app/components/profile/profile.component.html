@@ -1,0 +1,41 @@
+
+
+<div class="container text-center">
+  <h1 style="margin-left: -8rem">Profile </h1>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center ">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">FirstName : {{client?.firstName}} </h5>
+          <h5 class="card-title">LastName : {{client?.lastName}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Email : {{client?.email}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Gender :{{client?.gender}}</h6>
+          <hr>
+          <button routerLink="/update/{{client.id}}" class="button">Update</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h1 style="margin-left: -8rem">Tickets </h1>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center ">
+      <div *ngFor="let ticket of client?.buyTicket"  class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Ticket</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Seat Number : {{ticket.seatNumber}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Statue : {{ticket.statue}}</h6>
+          <hr>
+          <h5 class="card-title">Trip</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Price : {{ticket.trip.price}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Departure Time : {{ticket.trip.departureTime}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted" >Route : {{ticket.trip.route.startingPoint.name}}-{{ticket.trip.route.endingPoint.name}}</h6>
+          <hr>
+          <a href="#" class="card-link">Update</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

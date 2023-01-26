@@ -6,6 +6,8 @@ import {CityComponent} from "./components/city/city.component";
 import {BuyTicketComponent} from "./components/buy-ticket/buy-ticket.component";
 import {LoginComponent} from "./components/login/login.component";
 import {HeaderComponent} from "./components/header/header.component";
+import {ProfileComponent} from "./components/profile/profile.component";
+import {ProfileUpdateComponent} from "./components/profile-update/profile-update.component";
 
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path:"trips/:tripId/buy_ticket", component:BuyTicketComponent},
   {path:"login", component:LoginComponent},
   {path:"logout", component:HeaderComponent},
+  {path:"profile/:clientId", component:ProfileComponent},
+  {path:"update/:clientId", component:ProfileUpdateComponent},
 
 ];
 

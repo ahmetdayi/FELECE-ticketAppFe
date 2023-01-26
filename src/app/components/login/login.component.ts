@@ -38,6 +38,7 @@ export class LoginComponent {
       this.authService.login(loginModel).subscribe(response => {
         this.loginResponse = response
         localStorage.setItem("token",response.jwtToken)
+        localStorage.setItem("clientId",String(response.clientId))
         console.log(this.loginResponse)
       })
     }

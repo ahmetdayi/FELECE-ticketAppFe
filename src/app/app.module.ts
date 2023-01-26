@@ -14,6 +14,9 @@ import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { BuyTicketComponent } from './components/buy-ticket/buy-ticket.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
+import { UpdateBuyTicketComponent } from './components/update-buy-ticket/update-buy-ticket.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { LoginComponent } from './components/login/login.component';
     CityComponent,
     FilterComponent,
     BuyTicketComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+    ProfileUpdateComponent,
+    UpdateBuyTicketComponent
   ],
   imports: [
     BrowserModule,

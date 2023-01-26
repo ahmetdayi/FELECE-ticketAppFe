@@ -41,7 +41,7 @@ export class BuyTicketComponent implements OnInit{
   takeTicket(){
     let buyTicketModel = Object.assign({},this.buyTicketForm.value)
     buyTicketModel.tripId=this.param.tripId;
-
+    buyTicketModel.clientId=localStorage.getItem("clientId")
     this.buyTicketService.takeTicket(buyTicketModel).subscribe(params=>{
       this.buyTicketResponse=params
       console.log(this.buyTicketResponse)

@@ -19,6 +19,9 @@
           <a *ngIf="!isLogin()" class="nav-link" routerLink="/login">Login</a>
         </li>
         <li class="nav-item">
+          <a *ngIf="isLogin()" class="nav-link" routerLink="/profile/{{clientId}}">Profile</a>
+        </li>
+        <li class="nav-item">
           <a *ngIf="isLogin()" (click)="logout()" class="nav-link" routerLink="/logout">Logout</a>
         </li>
 

@@ -1,0 +1,60 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><h5 class="title">Update</h5></div>
+      <div class="card-body">
+        <form [formGroup]="updateForm">
+          <div class="mb-3">
+            <label for="firstName">first Name</label>
+            <div class="form-group">
+              <input type="text"
+                     id="firstName"
+                     formControlName="firstName" class="form-control"
+                     placeholder="First Name "/>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="lastName">Last Name</label>
+            <div class="form-group">
+              <input type="text"
+                     id="lastName"
+                     formControlName="lastName" class="form-control"
+                     placeholder="Last Name "/>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="gender">Gender</label>
+            <div class="form-group">
+              <input type="text"
+                     id="gender"
+                     formControlName="gender" class="form-control"
+                     placeholder="Gender "/>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="firstName">Password</label>
+            <div class="form-group">
+              <input type="text"
+                     id="password"
+
+                     formControlName="password" class="form-control"
+                     placeholder="Password "/>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="firstName">Matching Password</label>
+            <div class="form-group">
+              <input type="text"
+                     id="matchingPassword"
+                     formControlName="matchingPassword" class="form-control"
+                     placeholder="Matching Password"/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="updateClient()" routerLink="/">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
