@@ -20,16 +20,16 @@ export class TripComponent implements OnInit{
   constructor(private tripService: TripService,private activatedRoute:ActivatedRoute,private route:Router) {
   }
   ngOnInit(): void {
-    console.log(2)
+
     this.activatedRoute.params.subscribe(params=>{
       this.param=params
-      console.log(params)
+
     })
     if(this.param.starting_cityId&&this.param.ending_cityId){
       this.getTripsByRoute(this.param.starting_cityId,this.param.ending_cityId)
     }
     else if(this.param.year&&this.param.month&&this.param.day){
-      console.log(1)
+
       this.getTripsByDate(this.param.year,"0"+this.param.month,this.param.day)
 
     }
