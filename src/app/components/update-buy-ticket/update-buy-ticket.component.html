@@ -1,1 +1,24 @@
-<p>update-buy-ticket works!</p>
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><h5 class="title">Update Ticket</h5></div>
+      <div class="card-body">
+        <form [formGroup]="updateTicketForm">
+          <div class="mb-3">
+            <label for="statue">Statue</label>
+            <div class="form-group">
+              <input type="text"
+                     id="statue"
+                     formControlName="statue" class="form-control"
+                     placeholder="cancaled,delayed,bought "/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button routerLink="/" class="btn btn-fill btn-primary" (click)="updateTicket()">UpdateTicket</button>
+      </div>
+    </div>
+  </div>
+</div>
+

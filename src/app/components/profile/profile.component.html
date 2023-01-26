@@ -11,7 +11,7 @@
           <h6 class="card-subtitle mb-2 text-muted">Email : {{client?.email}}</h6>
           <h6 class="card-subtitle mb-2 text-muted">Gender :{{client?.gender}}</h6>
           <hr>
-          <button routerLink="/update/{{client.id}}" class="button">Update</button>
+          <button routerLink="/update/{{client?.id}}" class="button">Update</button>
 
         </div>
       </div>
@@ -32,7 +32,7 @@
           <h6 class="card-subtitle mb-2 text-muted">Departure Time : {{ticket.trip.departureTime}}</h6>
           <h6 class="card-subtitle mb-2 text-muted" >Route : {{ticket.trip.route.startingPoint.name}}-{{ticket.trip.route.endingPoint.name}}</h6>
           <hr>
-          <a href="#" class="card-link">Update</a>
+          <button routerLink="/updateTicket/{{ticket.id}}" class="button">Update</button>
 
         </div>
       </div>
