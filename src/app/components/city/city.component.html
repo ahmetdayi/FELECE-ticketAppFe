@@ -1,0 +1,36 @@
+<div class="container ">
+  <div class="row d-inline-block">
+    <div class="col-md-3">
+      <div ngbDropdown>
+        <button (click)="goPath()" type="button" class="btn btn-outline-primary" id="dropdownA"
+                ngbDropdownToggle> {{currentStartingPointCity.name}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownConfig">
+          <button  [class]="getCurrentStartingPoint(city)" (click)="setCurrentStartingPointCity(city)" ngbDropdownItem
+                  *ngFor="let city of cities">{{city.name}}</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  -
+  <div class="row d-inline-block">
+    <div class="col-md-3">
+      <div ngbDropdown>
+        <button type="button" class="btn btn-outline-primary" id="dropdownConfig"
+                ngbDropdownToggle> {{currentEndingPointCity.name}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownConfig">
+          <button  [class]="getCurrentEndingPoint(city)" (click)="setCurrentEndingPointCity(city)" ngbDropdownItem
+                  *ngFor="let city of cities">{{city.name}}</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div >
+    <br>
+    <button routerLink="trips/route/starting_city/{{currentStartingPointCity.id}}/ending_city/{{currentEndingPointCity.id}}" class="button">Route filter</button>
+  </div>
+
+</div>

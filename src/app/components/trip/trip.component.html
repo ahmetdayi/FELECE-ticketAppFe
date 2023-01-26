@@ -1,0 +1,19 @@
+<div class="container text-center trip">
+  <div class="row">
+    <div class="col">
+      <div class="card" *ngFor="let trip of trips">
+        <button class="button">
+        <div class="card-body cardMargin">
+
+          {{trip.id}} {{trip.price}}
+
+        </div>
+        </button>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
